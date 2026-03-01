@@ -1,0 +1,8 @@
+/* Cloned site reset */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; visibility: visible !important; opacity: 1 !important; }
+/* Kill JS-driven preloaders */
+.preloader, .page-loader, .site-loader, .loading-screen,
+[class*="preloader"], [class*="page-loader"], [id*="preloader"] {
+  display: none !important;
+}
