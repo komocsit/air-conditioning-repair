@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 export async function getServerSideProps({ res }) {
-  const htmlPath = path.join(process.cwd(), 'public/html/what-does-a-plumber-do.html');
+  const htmlPath = path.join(process.cwd(), 'public/html/what-does-an-ac-technician-do.html');
   const fileContent = fs.readFileSync(htmlPath, 'utf8');
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
   res.end(fileContent);
