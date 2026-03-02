@@ -5098,10 +5098,11 @@ button.swiper-pagination-bullet {
   position: relative; }
 
 .component-systemTabs .cards .card img {
-  height: 100%;
+  height: 220px;
   width: 100%;
-  max-width: 454px;
-  max-height: 507px; }
+  object-fit: cover;
+  max-width: 100%;
+  max-height: initial; }
 
 .component-systemTabs .cards .card .cardContent h2 {
   color: white;
