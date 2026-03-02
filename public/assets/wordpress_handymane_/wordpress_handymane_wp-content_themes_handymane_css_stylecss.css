@@ -209,9 +209,6 @@
 
 .h-yazi-margin-kucuk-21 {
   margin-top: -1rem; }
-  @media only screen and (max-width: 375px) {
-    .h-yazi-margin-kucuk-21 {
-      /*margin-left: 16rem;*/ } }
   @media only screen and (max-width: 56.25em) {
     .h-yazi-margin-kucuk-21 {
       margin-top: 1rem;
@@ -3479,6 +3476,7 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #33c4e7, #0c52aa);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   transition: all .2s;
   border-bottom: 0.1rem solid #33c4e7; }
@@ -3507,6 +3505,7 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #a55b57, #9E4B47);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   padding: 14px 15px 14px 18px; }
   @media only screen and (max-width: 56.25em) {
@@ -3519,6 +3518,7 @@ body {
   font-weight: 900;
   background-image: linear-gradient(to right, #a55b57, #9E4B47);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   text-align: center; }
   @media only screen and (max-width: 56.25em) {
@@ -3531,6 +3531,7 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #a55b57, #9E4B47);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent; }
   @media only screen and (max-width: 56.25em) {
     .h2-baslik-bottom {
@@ -3542,6 +3543,7 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #a55b57, #9E4B47);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   margin-bottom: 3rem; }
   @media only screen and (max-width: 56.25em) {
@@ -3554,6 +3556,7 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #fff, #fff);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   margin-bottom: 3rem; }
   @media only screen and (max-width: 56.25em) {
@@ -3566,6 +3569,7 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #259cb9, #33c4e7);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   margin-bottom: 3rem; }
   @media only screen and (max-width: 56.25em) {
@@ -3578,6 +3582,7 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #a55b57, #9E4B47);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   margin-bottom: 3rem; }
   @media only screen and (max-width: 56.25em) {
@@ -3591,6 +3596,7 @@ body {
   text-align: center;
   background-image: linear-gradient(to right, #a55b57, #a05c59);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   transition: all .2s;
   margin-bottom: 3rem;
@@ -3912,6 +3918,7 @@ h2.h3-baslik-anasayfa-beyaz {
   display: inline-block;
   background-image: linear-gradient(to right, #259cb9, #33c4e7);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   margin-bottom: 1rem; }
   .h2-baslik-hizmetler__paragraf {
@@ -3938,6 +3945,7 @@ h2.h3-baslik-anasayfa-beyaz {
   display: inline-block;
   background-image: linear-gradient(to right, #fff, #fff);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   text-align: center; }
   .h2-baslik-hizmetler-4__paragraf {
@@ -3967,6 +3975,7 @@ h2.h3-baslik-anasayfa-beyaz {
   display: inline-block;
   background-image: linear-gradient(to right, #a55b57, #9E4B47);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   text-align: center;
   display: flex;
@@ -4057,6 +4066,7 @@ h2.h3-baslik-anasayfa-beyaz {
   display: inline-block;
   background-image: linear-gradient(to right, #a55b57, #9E4B47);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   text-align: center; }
   .h2-baslik-hizmetler-5__paragraf {
@@ -4144,6 +4154,7 @@ h2.h3-baslik-anasayfa-beyaz {
   display: inline-block;
   background-image: linear-gradient(to right, #a55b57, #9E4B47);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: .1rem; }
   .h2-baslik-hizmetler-3__paragraf {
@@ -4767,6 +4778,7 @@ button.swiper-pagination-bullet {
   border-radius: 10px;
   position: relative;
   -ms-touch-action: none;
+  touch-action: none;
   background: rgba(0, 0, 0, 0.1); }
 
 .swiper-container-horizontal > .swiper-scrollbar {
@@ -4955,7 +4967,8 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden; }
 
 .swiper-container-coverflow .swiper-wrapper {
-  -ms-perspective: 1200px; }
+  -ms-perspective: 1200px;
+  perspective: 1200px; }
 
 .ba-slider {
   position: relative;
@@ -5085,10 +5098,11 @@ button.swiper-pagination-bullet {
   position: relative; }
 
 .component-systemTabs .cards .card img {
-  height: 100%;
+  height: 220px;
   width: 100%;
-  max-width: 454px;
-  max-height: 507px; }
+  object-fit: cover;
+  max-width: 100%;
+  max-height: initial; }
 
 .component-systemTabs .cards .card .cardContent h2 {
   color: white;
@@ -5152,6 +5166,7 @@ button.swiper-pagination-bullet {
   transition: all 0.5s ease;
   background-image: linear-gradient(to right, #4B9BD8, #4b9bd8);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent; }
 
 ul#tabs {
@@ -5184,18 +5199,12 @@ ul#tabs {
     top: 2rem;
     left: 4rem;
     z-index: 9; }
-  .header__logo {
-    /*height: 20px;*/ }
 
 .header-slider {
   height: 94vh;
   background-size: cover;
   background-position: top;
   /*position: relative;*/ }
-  @media only screen and (max-width: 40em) {
-    .header-slider {
-      /*height: 20vh;*/
-      /*margin-top: -300px;*/ } }
   @media only screen and (max-width: 1024px) {
     .header-slider {
       height: 39vh; } }
@@ -6460,6 +6469,7 @@ img.hm-mask-car {
     display: inline-block;
     background-image: linear-gradient(to right, #33c4e7, #0c52aa);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .hizmetler-kutu--icon {
@@ -6495,13 +6505,12 @@ img.hm-mask-car {
     display: inline-block;
     background-image: linear-gradient(to right, #a05c59, #9E4B47);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .ozellik-kutu--icon {
         margin-bottom: 0;
         font-size: 13rem; } }
-  .ozellik-kutu:hover {
-    /*transform: translateY(-1.5rem) scale(1.03);*/ }
   .ozellik-kutu--yazi {
     text-align: center;
     font-size: 1.4rem;
@@ -6551,6 +6560,7 @@ img.haber-gorsel {
     display: inline-block;
     background-image: linear-gradient(to right, #ffffff, #cecece);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .ozellik-kutu-siyah--icon {
@@ -6582,6 +6592,7 @@ img.haber-gorsel {
     display: inline-block;
     background-image: linear-gradient(to right, #ffffff, #cecece);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .ozellik-kutu-beyaz--icon {
@@ -6610,7 +6621,8 @@ img.haber-gorsel {
   flex-wrap: wrap;
   background: #fff;
   box-shadow: 3px 3px 13px 0 rgba(0, 0, 0, 0.096);
-  -webkit-transform: translateY(0%) translateZ(0px) scale(0.89); }
+  -webkit-transform: translateY(0%) translateZ(0px) scale(0.89);
+  transform: translateY(0%) translateZ(0px) scale(0.89); }
   @media only screen and (max-width: 1024px) {
     .post-kutu {
       width: 100%;
@@ -6641,6 +6653,7 @@ img.haber-gorsel {
     display: inline-block;
     background-image: linear-gradient(to right, #a05c59, #9E4B47);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .post-kutu--icon {
@@ -6689,13 +6702,12 @@ img.haber-gorsel {
     display: inline-block;
     background-image: linear-gradient(to right, #a05c59, #9E4B47);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .yorum-kutu--icon {
         margin-bottom: 0;
         font-size: 13rem; } }
-  .yorum-kutu:hover {
-    /* transform: translateY(-1.5rem) scale(1.03);*/ }
   .yorum-kutu--yazi {
     text-align: center;
     font-size: 1.5rem;
@@ -6724,13 +6736,12 @@ img.haber-gorsel {
     display: inline-block;
     background-image: linear-gradient(to right, #9E4B47, #a55b57);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .ozellik-kutu-iletisim--icon {
         margin-bottom: 0;
         font-size: 13rem; } }
-  .ozellik-kutu-iletisim:hover {
-    /*transform: translateY(-1.5rem) scale(1.03);*/ }
   .ozellik-kutu-iletisim--yazi {
     text-align: center;
     font-size: 1.5rem;
@@ -6765,13 +6776,12 @@ img.haber-gorsel {
     display: inline-block;
     background-image: linear-gradient(to right, #a05c59, #9E4B47);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .baslik-4--icon {
         margin-bottom: 0;
         font-size: 13rem; } }
-  .baslik-4:hover {
-    /*transform: translateY(-1.5rem) scale(1.03);*/ }
   .baslik-4--yazi {
     text-align: center;
     font-size: 1.3rem;
@@ -6804,13 +6814,12 @@ img.haber-gorsel {
     display: inline-block;
     background-image: linear-gradient(to right, #a05c59, #9E4B47);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .ozellik-kutu-yorumlar--icon {
         margin-bottom: 0;
         font-size: 13rem; } }
-  .ozellik-kutu-yorumlar:hover {
-    /*transform: translateY(-1.5rem) scale(1.03);*/ }
   .ozellik-kutu-yorumlar--yazi {
     text-align: center;
     font-size: 1.3rem;
@@ -6846,13 +6855,12 @@ img.haber-gorsel {
     display: inline-block;
     background-image: linear-gradient(to right, #a05c59, #9E4B47);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .services-kutu1--icon {
         margin-bottom: 0;
         font-size: 13rem; } }
-  .services-kutu1:hover {
-    /*transform: translateY(-1.5rem) scale(1.03);*/ }
   .services-kutu1--yazi {
     text-align: left;
     font-size: 1.4rem;
@@ -6892,13 +6900,12 @@ img.haber-gorsel {
     display: inline-block;
     background-image: linear-gradient(to right, #a05c59, #9E4B47);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .services-kutu2--icon {
         margin-bottom: 0;
         font-size: 13rem; } }
-  .services-kutu2:hover {
-    /*transform: translateY(-1.5rem) scale(1.03);*/ }
   .services-kutu2--yazi {
     text-align: center;
     font-size: 1.4rem;
@@ -6950,13 +6957,12 @@ img.haber-gorsel {
     display: inline-block;
     background-image: linear-gradient(to right, #a05c59, #9E4B47);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .services-kutu3--icon {
         margin-bottom: 0;
         font-size: 13rem; } }
-  .services-kutu3:hover {
-    /*transform: translateY(-1.5rem) scale(1.03);*/ }
   .services-kutu3--yazi {
     text-align: left;
     font-size: 1.4rem;
@@ -7926,7 +7932,8 @@ img.haber-gorsel {
   z-index: 1043;
   position: fixed;
   outline: none !important;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
 
 .mfp-container {
   text-align: center;
@@ -8021,6 +8028,7 @@ button.mfp-arrow {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+  appearance: none;
   display: block;
   outline: none;
   padding: 0;
@@ -8493,6 +8501,7 @@ h3.r1 {
 
 #search-wrap input {
   -webkit-appearance: none;
+  appearance: none;
   outline: none;
   cursor: pointer;
   color: #666; }
@@ -8653,6 +8662,7 @@ h3.r1 {
 .iletisim-icon {
   background-image: linear-gradient(to right, #fdfdfd, #e0dfdf);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   font-size: 5.5rem;
   transition: all .2s ease-in-out; }
@@ -9005,6 +9015,7 @@ select {
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 30px) 34px, calc(100% - 25px) 34px, calc(100% - 3.5em) 20px;
   background-size: 5px 5px, 5px 5px, 1px 40px;
@@ -10240,12 +10251,14 @@ button[type="submit"] i {
   position: relative;
   display: none;
   width: 100%;
-  -ms-touch-action: pan-y; }
+  -ms-touch-action: pan-y;
+  touch-action: pan-y; }
 
 .owl-carousel .owl-wrapper {
   position: relative;
   display: none;
-  -webkit-transform: translate3d(0px, 0px, 0px); }
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px); }
 
 .owl-carousel .owl-wrapper-outer {
   position: relative;
@@ -10300,6 +10313,7 @@ button[type="submit"] i {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
   display: inline-table; }
 
 .owl-theme .owl-controls {
@@ -10527,9 +10541,7 @@ button[type="submit"] i {
   opacity: 0.5;
   filter: Alpha(Opacity=50);
   /*IE7 fix*/
-  zoom: 1;
-  *display: inline;
-  /*IE7 life-saver */ }
+  zoom: 1; }
 
 /* Clickable class fix problem with hover on touch devices */
 /* Use it for non-touch hover action */
@@ -10542,9 +10554,7 @@ button[type="submit"] i {
 /* Styling Pagination*/
 .owl-theme .owl-controls .owl-page {
   display: inline-block;
-  zoom: 1;
-  *display: inline;
-  /*IE7 life-saver */ }
+  zoom: 1; }
 
 .owl-theme .owl-controls .owl-page span {
   display: block;
@@ -10626,7 +10636,6 @@ button[type="submit"] i {
 .customNavigation .btn {
   margin: 0;
   position: relative;
-  display: inline-block;
   overflow: visible;
   padding: 0.8em 1.1em;
   width: 50%;
@@ -10641,6 +10650,7 @@ button[type="submit"] i {
   -webkit-transition: all .1s ease-in 0s;
   -moz-transition: all .1s ease-in 0s;
   -o-transition: all .1s ease-in 0s;
+  transition: all .1s ease-in 0s;
   -webkit-font-smoothing: antialiased;
   background: #333; }
 
@@ -10688,7 +10698,8 @@ button[type="submit"] i {
   opacity: 0;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
-  -o-transition: all .3s ease; }
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
 
 .hoverfx .overlay {
   position: absolute;
@@ -10702,6 +10713,7 @@ button[type="submit"] i {
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -o-transition: all .3s ease;
+  transition: all .3s ease;
   display: none; }
 
 .item:hover .figure,
@@ -10929,7 +10941,6 @@ span.plus {
   transform: translateY(-4rem); }
 .form__radio-grup {
   width: 49%;
-  display: inline-block;
   float: left;
   margin-bottom: 2rem; }
 .form__radio-input {
@@ -11013,7 +11024,6 @@ span.plus {
     transform: translateY(-4rem); }
   .form-popup__radio-grup {
     width: 49%;
-    display: inline-block;
     float: left;
     margin-bottom: 2rem; }
   .form-popup__radio-input {
@@ -11512,6 +11522,7 @@ select {
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 30px) 34px, calc(100% - 25px) 34px, calc(100% - 3.5em) 20px;
   background-size: 5px 5px, 5px 5px, 1px 40px;
@@ -11880,6 +11891,33 @@ button[type="submit"] {
   100% {
     visibility: visible;
     opacity: 1; } }
+@keyframes reveal {
+  0% {
+    left: 0;
+    width: 0; }
+  50% {
+    left: 0;
+    width: 100%; }
+  51% {
+    left: auto;
+    right: 0; }
+  100% {
+    left: auto;
+    right: 0;
+    width: 0; } }
+@keyframes reveal-inner {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  50% {
+    visibility: hidden;
+    opacity: 0; }
+  51% {
+    visibility: visible;
+    opacity: 1; }
+  100% {
+    visibility: visible;
+    opacity: 1; } }
 /* PRELOADER */
 .preloader {
   width: 100%;
@@ -12095,12 +12133,12 @@ button[type="submit"] {
           padding-left: 20px;
           margin-bottom: 10px; }
         .side-widget .site-menu ul li a {
-          color: #000;
+          color: #212529;
           font-size: 18px;
           font-weight: 600; }
           .side-widget .site-menu ul li a:hover {
             text-decoration: none;
-            color: #000000; }
+            color: #0d7ebf; }
   .side-widget small {
     font-size: 18px;
     width: 100%;
@@ -12115,6 +12153,35 @@ button[type="submit"] {
   .side-widget.active {
     left: 0;
     z-index: 11; }
+  .side-widget .dropdown-menu {
+    position: static;
+    float: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0 0 8px 15px;
+    min-width: 0;
+    display: none;
+    -webkit-transition: none;
+    transition: none; }
+    .side-widget .dropdown-menu.show {
+      display: block; }
+    .side-widget .dropdown-menu .dropdown-item {
+      color: #212529;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 2.5rem;
+      padding: 0;
+      white-space: normal;
+      background: transparent; }
+      .side-widget .dropdown-menu .dropdown-item:hover,
+      .side-widget .dropdown-menu .dropdown-item:focus {
+        color: #0d7ebf;
+        background: transparent;
+        text-decoration: none; }
 
 .ortabuton {
   text-align: center;
@@ -12514,14 +12581,14 @@ ul li ul li {
       flex-wrap: wrap; }
     .page-header .container p {
       width: 100%;
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2px;
       margin-bottom: 50px;
       font-size: 20px;
-      width: 100%;
       margin-top: -14px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap; }
+      justify-content: center; }
 
 h3.h3-baslik-anasayfa-beyaz.owl-fadeUp-in {
   width: 100%;
@@ -14046,7 +14113,14 @@ li.menu3 {
 i.flaticon-right-chevron {
   font-size: 12px;
   font-weight: 800;
-  padding: 9px; }
+  padding: 9px;
+  margin: 0 2px; }
+
+.page-header .container p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px; }
 
 i.flaticon-road {
   font-size: 35px; }
@@ -14201,8 +14275,7 @@ span.sb {
   z-index: 0; }
   @media only screen and (max-width: 56.25em) {
     .imagerotate {
-      width: 352px;
-      left: 0%; } }
+      display: none; } }
 
 img.orgsag {
   margin-top: -15px; }
@@ -14530,18 +14603,12 @@ p.footerp {
   .footer .footer-menu li {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     margin: 0;
     padding: 5px 0;
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-around;
-    text-align: center; }
+    list-style: none; }
 
   p.footerp {
     font-size: 16px;
@@ -14742,18 +14809,12 @@ p.footerp {
   .footer .footer-menu li {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     margin: 0;
     padding: 5px 0;
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-around;
-    text-align: center; }
+    list-style: none; }
 
   .footer .footer-info {
     width: 100%;
@@ -14929,9 +14990,17 @@ p.footerp {
   .navbar .navbar-button {
     display: none; }
 
+  .slider,
+  .slider .main-slider {
+    height: 60vh;
+    min-height: 380px; }
+
   .slider .main-slider .swiper-slide {
     padding: 0;
     padding-top: 100px; }
+
+  .slider .main-slider .swiper-slide .slide-image {
+    background-position: center top !important; }
 
   .blogcount {
     margin-top: 15rem; }
@@ -15019,18 +15088,12 @@ p.footerp {
   .footer .footer-menu li {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     margin: 0;
     padding: 5px 0;
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-around;
-    text-align: center; }
+    list-style: none; }
 
   .footer .footer-info {
     width: 100%;
@@ -15160,7 +15223,10 @@ p.footerp {
 
   .page-header .container p {
     width: 100%;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
     margin-bottom: 50px;
     font-size: 16px; }
 
@@ -15385,18 +15451,12 @@ p.footerp {
   .footer .footer-menu li {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     margin: 0;
     padding: 5px 0;
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-around;
-    text-align: center; }
+    list-style: none; }
 
   .footer .footer-info {
     width: 100%;
@@ -15522,7 +15582,10 @@ p.footerp {
 
   .page-header .container p {
     width: 100%;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
     margin-bottom: 50px;
     font-size: 16px; } }
 @media (min-width: 896px) and (max-width: 896px) {
@@ -15551,13 +15614,12 @@ p.footerp {
 
   .page-header .container p {
     width: 100%;
-    display: block;
-    margin-bottom: 92px;
-    font-size: 20px;
-    width: 100%;
     display: flex;
-    justify-content: left;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 92px;
+    font-size: 20px; } }
 @media (min-width: 844px) and (max-width: 844px) {
   .page-header .container h2 {
     width: 100%;
@@ -15584,13 +15646,12 @@ p.footerp {
 
   .page-header .container p {
     width: 100%;
-    display: block;
-    margin-bottom: 92px;
-    font-size: 20px;
-    width: 100%;
     display: flex;
-    justify-content: left;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 92px;
+    font-size: 20px; } }
 @media (min-width: 820px) and (max-width: 820px) {
   .page-header .container h2 {
     width: 100%;
@@ -15617,13 +15678,12 @@ p.footerp {
 
   .page-header .container p {
     width: 100%;
-    display: block;
-    margin-bottom: 92px;
-    font-size: 20px;
-    width: 100%;
     display: flex;
-    justify-content: left;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 92px;
+    font-size: 20px; } }
 @media (min-width: 768px) and (max-width: 768px) {
   .page-header .container h2 {
     width: 100%;
@@ -15650,13 +15710,12 @@ p.footerp {
 
   .page-header .container p {
     width: 100%;
-    display: block;
-    margin-bottom: 92px;
-    font-size: 20px;
-    width: 100%;
     display: flex;
-    justify-content: left;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 92px;
+    font-size: 20px; } }
 @media (min-width: 1180px) and (max-width: 1200px) {
   .page-header .container h2 {
     width: 100%;
@@ -16266,15 +16325,13 @@ input#wp-block-search__input-1 {
 
   .footer .footer-menu li:before {
     content: "";
-    width: 100%;
-    height: 1px;
+    width: 11px;
+    height: 4px;
     display: inline-block;
     background: #ffffff;
     margin-right: 9px;
     border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    text-align: center; }
+    flex-shrink: 0; }
 
   .footer {
     background: #0d7ebf;
@@ -16527,15 +16584,13 @@ input#wp-block-search__input-1 {
 
   .footer .footer-menu li:before {
     content: "";
-    width: 100%;
-    height: 1px;
+    width: 11px;
+    height: 4px;
     display: inline-block;
     background: #ffffff;
     margin-right: 9px;
     border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    text-align: center; }
+    flex-shrink: 0; }
 
   .footer {
     background: #0d7ebf;

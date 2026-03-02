@@ -49,35 +49,7 @@
       });
   });
 
-    // PAGE TRANSITION
-    $('body a').on('click', function (e) {
-
-      var target = $(this).attr('target');
-      var fancybox = $(this).data('fancybox');
-      var url = this.getAttribute("href");
-      if (target != '_blank' && typeof fancybox == 'undefined' && url.indexOf('') < 0) {
-
-
-        e.preventDefault();
-        var url = this.getAttribute("href");
-        if (url.indexOf('') != -1) {
-          var hash = url.substring(url.indexOf('#'));
-
-
-          if ($('body ' + hash).length != 0) {
-            $('.page-transition').removeClass("active");
-
-
-          }
-        } else {
-          $('.page-transition').toggleClass("active");
-          setTimeout(function () {
-            window.location = url;
-          }, 1000);
-
-        }
-      }
-    });
+    // PAGE TRANSITION - disabled: handled by Next.js SPA router in Layout.js
 
 
   });
@@ -110,8 +82,8 @@
   wow.init();
 
 
-  // CAROUSEL CLASSES SLIDER
-  var swiper = new Swiper('.carousel-classes', {
+  // CAROUSEL CLASSES SLIDER - disabled: handled by _app.js reinitSwiper()
+  if (false) var swiper = new Swiper('.carousel-classes', {
     slidesPerView: '4',
     spaceBetween: 30,
     loop: 'true',
@@ -142,8 +114,8 @@
   });
 
 
-  // MAIN SLIDER
-  var swiper = new Swiper('.main-slider', {
+  // MAIN SLIDER - disabled: handled by _app.js reinitSwiper()
+  if (false) var swiper = new Swiper('.main-slider', {
     slidesPerView: '1',
     spaceBetween: 0,
     speed: 1000,
