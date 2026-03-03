@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import React, { useEffect } from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -8,33 +8,39 @@ export default function Layout({ children }) {
   // Intercept anchor tags to use client-side routing to prevent white flashes
   useEffect(() => {
     const handleGlobalClick = (e) => {
-      const a = e.target.closest('a');
+      const a = e.target.closest("a");
       if (!a || !a.href) return;
-      
+
       const url = new URL(a.href);
       if (url.origin === window.location.origin) {
-        if (a.getAttribute('target') === '_blank') return;
-        if (url.pathname.includes('.pdf')) return;
-        if (a.getAttribute('href').startsWith('#')) return; // Ignore internal hash links
-        
+        if (a.getAttribute("target") === "_blank") return;
+        if (url.pathname.includes(".pdf")) return;
+        if (a.getAttribute("href").startsWith("#")) return; // Ignore internal hash links
+
         e.preventDefault();
         router.push(url.pathname + url.search + url.hash);
       }
     };
-    
-    document.addEventListener('click', handleGlobalClick);
-    return () => document.removeEventListener('click', handleGlobalClick);
+
+    document.addEventListener("click", handleGlobalClick);
+    return () => document.removeEventListener("click", handleGlobalClick);
   }, [router]);
 
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
         <meta charSet="utf-8" />
         <title>CoolBreeze AC Repair</title>
       </Head>
 
-      <div suppressHydrationWarning={true} dangerouslySetInnerHTML={{ __html: `<aside class="side-widget">
+      <div
+        suppressHydrationWarning={true}
+        dangerouslySetInnerHTML={{
+          __html: `<aside class="side-widget">
 <div class="inner">
 <!-- Logo Menu Mobile -->
     <div class="logo"> <a href="/"><img src="/logo-ac-repair.svg" alt="AC Repair Logo" style="height:52px;width:auto;"></a> </div>
@@ -101,9 +107,18 @@ export default function Layout({ children }) {
     <small>
             © 2026 CoolBreeze AC Repair        
     </small> </div>
-</aside>` }} />
-      <div suppressHydrationWarning={true} dangerouslySetInnerHTML={{ __html: `<nav class="navbar navbar-expand-md navbar-light bg-light">
-<div class="container">
+</aside>`,
+        }}
+      />
+      <div
+        suppressHydrationWarning={true}
+        dangerouslySetInnerHTML={{
+          __html: `<nav class="navbar navbar-expand-md navbar-light bg-light" style="background: linear-gradient(to bottom, #ffffff 0%, #f4f4f4 80%, #e0e0e0 100%) !important; border-radius: 12px 12px 25px 25px; box-shadow: 0 15px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1), inset 0 -4px 0 0 #d0d0d0; border: 1px solid #eaeaea; margin-top: 15px; max-width: 1200px; margin-left: auto; margin-right: auto; position: relative;">
+<div style="position: absolute; bottom: 12px; left: 6%; right: 6%; height: 6px; background: #222; border-radius: 10px; opacity: 0.85; box-shadow: inset 0 3px 5px rgba(0,0,0,0.8);"></div>
+<div style="position: absolute; right: 40px; top: 25px; width: 40px; height: 20px; background: #000; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 0 8px rgba(0,0,0,0.9); z-index: 10;">
+  <span style="color: #00ffcc; font-family: 'Courier New', Courier, monospace; font-size: 12px; font-weight: bold; letter-spacing: 1px;">72&deg;</span>
+</div>
+<div class="container" style="position: relative; z-index: 20; padding-bottom: 15px;">
 <!-- Logo Menu Desktop -->
     <div class="logo"> <a href="/">
                  <img src="/logo-ac-repair.svg" alt="AC Repair Logo" style="height:52px;width:auto;">
@@ -131,12 +146,17 @@ export default function Layout({ children }) {
 
                 <div class="navbar-button"> <div class="telh"><i class="flaticon-headphones iconp"></i>&nbsp;&nbsp;&nbsp;+1 (234) 567 89 10</div> </div>
             </div>
-</nav>` }} />
+</nav>`,
+        }}
+      />
 
       {/* Main Page Content injected here */}
       {children}
 
-      <div suppressHydrationWarning={true} dangerouslySetInnerHTML={{ __html: `<footer class="footer">
+      <div
+        suppressHydrationWarning={true}
+        dangerouslySetInnerHTML={{
+          __html: `<footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-xl-3 col-lg-4 cce">
@@ -220,7 +240,9 @@ export default function Layout({ children }) {
         <i class="flaticon-chevron icontops"></i>
         <div class="bosluk3"></div>
     </div>
-</footer>` }} />
+</footer>`,
+        }}
+      />
     </>
   );
 }
